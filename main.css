@@ -117,7 +117,7 @@ font-style: italic;
 .italic a:hover {
     
     text-decoration: underline;
- 
+    font-weight: 500;
     
 }
 
@@ -183,13 +183,14 @@ display: block;
 
 .externalLink:hover {
     font-weight: bold; 
-    text-decoration: none;
+    text-decoration: underline;
     
 }
 
 .clicktoshowEx:hover {
  
    font-weight: bold;
+    text-decoration: underline;
  
 }
 .clicktoshowEx {
@@ -256,20 +257,22 @@ checklistItemItem {
 }
 .desdev .guidenumber  {
     
- background-color: #A9D9E1;    
+ background-color: #a4cbce;  
+    border-bottom: 4px double black;
     
 }
  
 .dev .guidenumber  {
     
- background-color: #CCC5D3;    
+ background-color: #bdbdcd;    
+    border-bottom: 2px dashed black;
     
 }
 
 .des .guidenumber {
     
- background-color: #FFF6B3;    
-       border-bottom: 1px solid black;
+ background-color: #f6acad;    
+       border-bottom: 2px solid black;
 }
 
 
@@ -287,30 +290,30 @@ checklistItemItem {
  
 
 #colourKeyDes {
- color:  #FFF6B3;    
- background-color: #FFF6B3;    border: 1px solid black; 
+ color:  #f6acad;    
+ background-color: #f6acad;    border-bottom: 3px solid black; 
 /* border-bottom: 3px solid #E6DDA1;;*/
   
 }
 
 #colourKeyDev {
- color: #CCC5D3;    
+ color: #bdbdcd;    
  
-  background-color: #CCC5D3;  border: 1px solid black;
+  background-color: #bdbdcd;  border-bottom: 2px dashed black;
 /*  border-bottom: 3px solid #938E98;*/
     
 }
 #colourKeyDevDes {
-  color: #A9D9E1;    
-  background-color: #A9D9E1;   
- border: 1px solid black;
+  color: #a4cbce;    
+  background-color: #a4cbce;   
+ border-bottom: 3px double black;
     
     
 }
 
 #resetChecks  {
     
- border: 4px solid #FF9999;
+ border: 2px solid #fcd059;
     padding: 5px;
     display: inline-block;
     font-size: 1.5em;
@@ -325,9 +328,9 @@ checklistItemItem {
 
 #resetChecks:hover  {
     
- background-color:#FF9999;
+ background-color:#fcd059;
     font-weight: bold;
-    border-bottom: 4px solid black;
+    border-bottom: 2px solid black;
 }
 
 #section3 h2 {
