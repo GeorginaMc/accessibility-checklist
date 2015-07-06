@@ -51,6 +51,13 @@ $(".clicktoshowEx").click(function() {
      $(".hideOrShow").text("Hide"); 
   }; 
 });
+
+
+
+
+
+
+
     
     
  
@@ -104,10 +111,7 @@ $("#resetFilter").on("click", function () {
 });     
     
 
-   
-    
-    
-    
+              
      
 $(".pass").on("click", function () {
      $("input:checkbox[class=pass]").each(function () {        

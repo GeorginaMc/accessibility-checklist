@@ -1,347 +1,292 @@
 html {
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+		line-height: 1.5;
 }
 
-body {
-    font-family: 'Lato', sans-serif;
-      
+body { 
+		font-family: 'Lato', sans-serif;
+
 }
 
 a {
-
-    cursor: pointer;
-    text-decoration: none;
-    color: #c10c24;
-
-}
-
-
+		cursor: pointer;
+		text-decoration: none;
+	    color: #c10c24;
+} 
 
 header {
-
-text-align: center; 
-
+		text-align: center; 
 }
 
 p {
-
-text-align: justify;  font-family: 'Lato'; 
-font-size: 1.5em;
-
+		text-align: justify;  
+		font-family: 'Lato'; 
+		font-size: 1.5em;
 }
 
 h1 {
-    font-size: 5.1em;
-
+		font-size: 5.1em;
 }
 
 li {
-    
- list-style: none;   
+		list-style: none;   
 }
  
 header ul {
-    text-align: center;
-    text-decoration: underline;
+		text-align: center;
+		text-decoration: underline;
 }
 br {
-    
- margin-bottom: 5px;   
+		margin-bottom: 5px;   
 }
-
 header li {
-    font-size: 1.5em;
-    display: inline;
-    padding: 10px;
-    cursor: pointer;
-    margin: 5px;
+		font-size: 1.5em;
+		display: inline;
+		padding: 10px;
+		cursor: pointer;
+		margin: 5px;
 }
- 
 header li:hover {
-   text-decoration: underline;   
+		text-decoration: underline;   
 }
-
 section {
-    margin-top: 70px;
-    padding: 20px;
-    text-align: center;
+		margin-top: 10px;
+		padding: 20px;
+		padding-top: 5px;
+		text-align: center;
 }
 
 section h2 {
-    font-weight: bold;
-    display: inline;
-    text-align: center;
-    border-top: 1px solid black;
-    text-transform: capitalize;
-    text-align: justify;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 2em;
+		font-weight: bold;
+		display: inline;
+		text-align: center;
+	 
+		text-transform: capitalize;
+		text-align: justify;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-size: 2em;
+}
+
+
+.principleTitle {
+	
+	
+	border-top: 1px solid black;
+	
 }
 
 section p {
-   margin-left: 30%;
-   margin-right: 30%;
-   font-size: 1.5em;
+		margin-left: 30%;
+		margin-right: 30%;
+		font-size: 1.5em;
 }
 
 #section2, #section3  {
-display: none;
+		display: none;
 }
 
 .principleHeader{
-    color: red;
+		color: red;
 
 }
 
 .checkListItem h2 {
-
-text-align: center;
-
+		text-align: center;
 }
+
 .checkListItem {
-
-font-weight: bold;
-
-
+		font-weight: bold;
 }
 
 .italic {
-font-style: italic;
- 
- font-weight: 100;
-  
+		font-style: italic;
+		font-weight: 300;  
 }
 
 .italic a:hover {
-    
-    text-decoration: underline;
-    font-weight: 500;
-    
+	    text-decoration: underline;
+	    font-weight: 500;  
 }
 
 .principleTitle {
 
-text-align: center;
-display: block;
-    text-decoration: underline;
+		text-align: center;
+		display: block;
+		text-decoration: underline;
 
 }
 .guidelineDesc {
-
- font-style: normal;
- font-size: 1.6em;
- font-weight: 300;
-    margin-top: 100px;
-    
+		
+		font-style: normal;
+		font-size: 1.6em;
+		font-weight: 300;
+		margin-top: 50px;
+		border-top: 2px solid black;
+		padding-top: 20px;    
 }
 
 .guideline {
     
- border-left: 2px solid  black;
-    padding-left: 50px;
-    margin-left:  28.5%;
-    margin-top: 60px;
+		border-left: 2px solid  black;
+		padding-left: 50px;
+		margin-top: 60px;
 }
 
- .bold {
+.bold {
+		font-weight: bold;
+}
 
-    font-weight: bold;
-    
 
+.guideline .fa-pencil, .guideline .fa-code {	
+		padding-left: 20px;
+	
 }
 
 
 .exceptions  {
-    text-align: left;
- 
-    font-weight: 300;
-       margin-left: 34%;
-   margin-right: 30%;
-   font-size: 1.5em;
-    display: none;
- 
-     
-    padding-right: 10px;
-    border-left: 2px solid #168180;
-    display: none;
-    padding-left: 65px;
+		text-align: left;
+		font-weight: 300;
+		margin-left: 34%;
+		margin-right: 30%;
+		font-size: 1.5em;
+		display: none;
+		padding-right: 10px;
+		border-left: 2px solid #168180;
+		display: none;
+		padding-left: 65px;
 }
 
-.externalLink {
-    
-    cursor: pointer;
-  
-    padding:3px;
-    margin-right:8px;
-    margin-top: 7px;
-   color: #c34817;
-  font-size: 1;
-    font-weight: 100;
+.externalLink {		
+		cursor: pointer;	
+		padding:3px;
+		margin-right:8px;
+		margin-top: 7px;
+		color: #c34817;
+		font-size: 1;
+		font-weight: 300;
 }
 
 .externalLink:hover {
-    font-weight: bold; 
-    text-decoration: underline;
-    
+	    font-weight: bold; 
+	    text-decoration: underline;
 }
 
 .clicktoshowEx:hover {
- 
-   font-weight: bold;
-    text-decoration: underline;
- 
-}
-.clicktoshowEx {
-    
- color: #168180;    
-    
-     padding: 3px;
-    cursor: pointer;
-    font-weight: 100;
-    font-size: 1.1em;
-    
+		font-weight: bold;
+		text-decoration: underline;
 }
 
+.clicktoshowEx {   
+		color: #168180;    
+		padding: 3px;
+		cursor: pointer;
+		font-weight: 300;
+		font-size: 1.1em;
+   
+}
 
- 
-
-.checkbox {
-     
- color: black;    
-  font-size: 1.5em; 
-    
+.checkbox {     
+		color: black;    
+		font-size: 1.5em;   
 }
 
 input[type=checkbox] {
-  /* All browsers except webkit*/
-  transform: scale(2.1);
-  
-  /* Webkit browsers*/
-  -webkit-transform: scale(2.1);
+		/* All browsers except webkit*/
+		transform: scale(2.1);		
+		/* Webkit browsers*/
+		-webkit-transform: scale(2.1);
 }
 
 .box{
- 
-    margin-right: 10px;
-    
-    
+		margin-right: 10px;
 }
 
 .guidenumber {
-    
- border-bottom: 2px solid black;   
-    
+		border-bottom: 2px solid black;      
 }
 
-.underline {
-    
-padding-top: 15px;padding-bottom: 15px;
-border-top: 1px solid #10121C;
-border-bottom: 1px solid #10121C;
-    
-}
-
-
-
-checklistItemItem {
-    
- border-left: 6px double #28A1B5;   
-    
-}
-
-.guidenumber {
-     
-
-}
-.desdev .guidenumber  {
-    
- background-color: #a4cbce;  
-    border-bottom: 4px double black;
-    
-}
- 
-.dev .guidenumber  {
-    
- background-color: #bdbdcd;    
-    border-bottom: 2px dashed black;
-    
-}
-
-.des .guidenumber {
-    
- background-color: #f6acad;    
-       border-bottom: 2px solid black;
-}
-
-
-.filter {
-    
- font-size: 0.9em;   
-    
-}
-
-.yesCheck {
-    
- padding-left: 20px;   
-    
-}
- 
-
-#colourKeyDes {
- color:  #f6acad;    
- background-color: #f6acad;    border-bottom: 3px solid black; 
-/* border-bottom: 3px solid #E6DDA1;;*/
+.underline {  
+		padding-top: 15px;
+		padding-bottom: 15px;
   
 }
+checklistItemItem {
+		border-left: 6px double #28A1B5;   
+}
 
-#colourKeyDev {
- color: #bdbdcd;    
+label, input {
+		cursor: pointer;
+}
+
  
-  background-color: #bdbdcd;  border-bottom: 2px dashed black;
-/*  border-bottom: 3px solid #938E98;*/
+.desdev .guidenumber  {
+		background-color: #C8E0E2;  
+		border-bottom: 7px double black; 
+		margin-left: 5px;
     
+}
+.dev .guidenumber  {
+		background-color: #CACAD7;    
+		border-bottom: 2px dashed black;
+    
+}
+.des .guidenumber {    
+		background-color: #FACDCE;    
+		border-bottom: 2px solid black;
+}
+.filter { 
+		font-size: 0.9em;   
+		margin-bottom: 40px;  
+}
+.yesCheck {
+		padding-left: 20px;   
+    
+}
+#colourKeyDes {
+		padding-left: 10px; 
+		padding-right: 10px; 
+		background-color: #FACDCE;    
+		border-bottom: 3px solid black; 
+}
+#colourKeyDev {
+		padding-left: 10px; 
+		padding-right: 10px;   
+		background-color: #BDBDCD;  
+		border-bottom: 2px dashed black;   
 }
 #colourKeyDevDes {
-  color: #a4cbce;    
-  background-color: #a4cbce;   
- border-bottom: 3px double black;
-    
-    
+		padding-left: 10px; 
+		padding-right: 10px;
+		background-color: #C8E0E2;   
+		border-bottom: 6px double black;
 }
-
 #resetChecks  {
-    
- border: 2px solid #fcd059;
-    padding: 5px;
-    display: inline-block;
-    font-size: 1.5em;
-    cursor: pointer;
-    
-       
+		border: 2px solid #fcd059;
+		padding: 5px;
+		display: inline-block;
+		font-size: 1.5em;
+		cursor: pointer;  
 }
  
-
-
-
-
-#resetChecks:hover  {
-    
- background-color:#fcd059;
-    font-weight: bold;
-    border-bottom: 2px solid black;
+ #resetChecks:hover  {   
+		background-color:#fcd059;
+		font-weight: bold;
+		border-bottom: 2px solid black;
 }
 
 #section3 h2 {
-    
-    text-align: left !important;
-  
-}
-.resource {
-    
- text-decoration: underline;
-    
+		text-align: left !important;
 }
 
+.resource {
+		text-decoration: underline;
+}
+
+
+label {
+	
+	margin-right: 5px;
+	
+}
  

@@ -1,315 +1,843 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Accessibility </title>
-<meta name="description" content="Accessibility checklist minisite.">
-<link rel="stylesheet" href="main.css">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>       
-<script type="text/javascript" src="jquery.js"></script>      
-<link href='//fonts.googleapis.com/css?family=Lato:400,300italic,400italic,700' rel='stylesheet' type='text/css'>   
-<link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+    <title>Accessibility</title>
+    <meta content="Accessibility checklist minisite." name="description">
+    <link href="main.css" rel="stylesheet">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script src="jquery.js" type="text/javascript"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100italic,100,300italic,700,900' rel='stylesheet' type='text/css'>
+    <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-    
-<body>      
-<header>
-  <h1>Accessibility Checklist </h1> 
-  <ul>
-    <li id="tab1"> Brief introduction </li>
-    <li id="tab2"> The checklist </li>
-    <li id="tab3"> Tools & Resources </li>
-  </ul>
-</header>
+
+<body>
+    <header>
+        <h1>Accessibility Checklist</h1>
+
+        <ul>
+            <li id="tab1">Brief introduction</li>
+
+            <li id="tab2">The checklist</li>
+
+            <li id="tab3">Tools & Resources</li>
+        </ul>
+    </header>
+
+    <div class="contentWrapper">
+        <section id="section1">
+            
+
+            <p>Accessibility is the practice of ensuring that websites can be used by everyone regardless of whether they have a visual, physical, auditory or cognitive disability. The accessibility
+            guidelines are structured around four key principles which help create websites that are <strong>perceivable,</strong> <strong>operable,</strong> <strong>understandable</strong> and
+            <strong>robust.</strong><br>
+            <br>
+            Accessibility is important because, by making a conscious effort to address issues that affect users of different abilities, you maximise the overall number of people who can use the site
+            :)</p>
+        </section>
+
+        <section id="section2">
         
-    
-<div class = "contentWrapper">
+
+            <p class="italic"><em>The checklist was created using the <a href="http://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0. </a> to meet level AA.    Links below each guideline will direct you to the WCAG website to find out more
+            info.<br>  
+
+            <div class="filter">
+                <p><span style="text-decoration: underline;">Filter the checklist:</span><br>
+                <span class="fa fa-pencil" id="colourKeyDes" style="font-style: italic"></span> <span class="yesCheck designer">For designer:</span> <input id="designerFilter"
+                name="group1" type="radio" value="designer"><br>
+                <span class="fa fa-code" id="colourKeyDev" style="font-style: italic"></span> <span class="yesCheck developers">For developer:</span> <input id="developerFilter" name=
+                "group1" type="radio" value="developer"><br>
+                <span id="colourKeyDevDes"><i class="fa fa-pencil"></i> <i class="fa fa-code"></i></span> <span class="yesCheck">For design, developer and items relevant to
+                both. </span> <input id="allFilter" name="group1" type="radio" value="both"><br></p>
+            </div><!--   PRINCIPLE 1 -->
+
+            <div class="container">
+                <h2 class="principleTitle">Principle 1: Perceivable</h2>
+
+                <p class="principleDesc italic">This principle focuses on ensuring the user can operate, interact and navigate the site using an assistive
+                device.</p>
+            </div><!--- Principle desciption =-->
+            <!--  ==================== PRINCIPLE 1.1 ==================== -->
+
+            <p class="guidelineDesc justDes"><span class="bold underline">1.1: Text Alternatives.</span><br>
+            <br>
+            For all non-text content that has a critical purpose such as to provide vital information or respond to user input, provide text alternatives. </p>
+            <!--    CHECK LIST ITEM 1.1.1 -->
+
+            <div class="checklistItem itemOne des">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">1.1.1. <i class="fa fa-pencil -2x"></i></span><br>
+                        For non text content (images, audio, video) have you provided text alternatives and named all of your buttons (e.g ‘search or submit’)? <br style=
+                        "line-height: 190%; margin-bottom: 20px;">
+                        <span class="clicktoshowEx">- <span class="hideOrShow">Show</span> exceptions</span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-text-equiv-all" target="_blank">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html" target="_blank">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+
+                <p class="exceptions"><strong>1.1.1 Guidline Exceptions</strong><br>
+                <br>
+                + If the non-text context is a <strong>control or accepts user input</strong> , then have you provided a name that describes it purpose?<br>
+                <br>
+                + If non-text content is <strong>time-based media,</strong> then does it have a name that describes its purpose?<br>
+                <br>
+                + If the non-text content is a <strong>test or exercise</strong> that would be invalid if presented in text, does the text alternative at least provide descriptive identification of
+                the non-text content?<br>
+                <br>
+                + If it intended to create a <strong>specific sensory</strong> experience then does the text alternative at least provide descriptive identification of the non-text content?<br>
+                <br>
+                + If non-text is purely decorative then is it implemented in a way that can be ignored by assistive technology?<br>
+                <br>
+                <br></p><!--- END OF exception   =-->
+            </div><!--- END OF CHECKLIST ITEM 1.1.1  =-->
+            <!--  ==================== PRINCIPLE 1.2 ==================== -->
+
+            <p class="guidelineDesc justDev"><span class="bold underline">1.2: Accessibility for time-based media content.</span><br>
+            <br>
+            For time based media content, include a variety of methods for presenting the equivalent information.</p><!--    CHECK LIST ITEM 1.2.1 -->
+
+            <div class="checklistItem itemTwo dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">1.2.1. <i class="fa fa-code"></i></span><br>
+                        For audio-only content have you provided a text transcript? For video content have provided subtitles?<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-av-only-alt" target="_blank"> - How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html" target="_blank"> - About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemTwo">Yes:</label> <input class="pass" id="itemTwo" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+            </div><!--- END OF CHECKLIST ITEM 1.2  =-->
+            <!--  ==================== PRINCIPLE 1.3 ==================== -->
+
+            <p class="guidelineDesc both"><span class="bold underline">1.3: Adaptable content.</span><br>
+            <br>
+            Maintain separation of the presentation from the information, functionality and structure of the site so that the content does not lose its meaning when its presentation is changed or the
+            visuals are removed.</p><!--    CHECK LIST ITEM 1.3.1 -->
+
+            <div class="checklistItem itemThreeOne dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">1.3.1. <i class="fa fa-code"></i></span><br>
+                        Have you used ARIA (Accessible Rich Internet Applications) appropriately in your markup by doing the following:<br>
+                        <br>
+                        + Have you used the role attribute to define what an element is or does (e.g. article, banner, main)?<br>
+                        + Have you used properties to define the property or meaning of elements. For example, would it be possible for a screen reader to identify fields where the input is
+                        required?<br>
+                        + Have you used states to identify the current condition of an element that changes based on user interaction or some dynamic variable?<br style=
+                        "line-height: 190%; margin-bottom: 20px;">
+                        <br>
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-programmatic" target="_blank"> - How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html"target="_blank"> - About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemTwo">Yes:</label> <input class="pass" id="itemThreeOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="checklistItem itemThreeTwo desdev">
+                <ul>
+                    <li>
+                        <!--     guideline point 1.3.2-->
+
+                        <p class="guideline"><span class="bold guidenumber">1.3.2. <i class="fa fa-pencil"></i> <i class="fa fa-code"></i></span><br>
+                        Is content ordered in a meaningful sequence and maintains its meaning when linearised, such as when style sheets are disabled? (Can a correct reading sequence be
+                        programatically determined.)?<br style="line-height: 190%; margin-bottom: 20px;">
+                        <br>
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-sequence" target="_blank">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html" target="_blank">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemThreeTwo">Yes:</label> <input class="pass" id="itemThreeTwo" name="yes" type="checkbox" value="yes"></p><!--     guideline point end -->
+                    </li>
+                </ul>
+            </div>
+
+            <div class="checklistItem itemThreeThree des">
+                <ul>
+                    <li>
+                        <!--     guideline point 1.3.3-->
+
+                        <p class="guideline"><span class="bold guidenumber">1.3.3 <i class="fa fa-pencil"></i></span><br>
+                        Have you avoided creating content that relies solely on its colour, shape, location or sound as its sole method of conveying its meaning?<br style=
+                        "line-height: 190%; margin-bottom: 20px;">
+                        <br>
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-understanding" target="_blank"> - How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html" target="_blank"> - About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemThreeThree">Yes:</label> <input class="pass" id="itemThreeThree" name="yes" type="checkbox" value="yes"></p><!--     guideline point end -->
+                    </li>
+                </ul>
+            </div>
+
+            <p class="guidelineDesc"><span class="bold underline">1.4: Distinguishable content.</span><br>
+            <br>
+            Ensure it is easy for users to perceive the content.</p>
+
+            <div class="checklistItem itemFourOne desdev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">1.4.1. <i class="fa fa-pencil"></i> <i class="fa fa-code"></i></span><br>
+                        Have you avoided using colour as the only visual means of conveying information, indicating an action, prompting a response or distinguishing a visual element?<br style=
+                        "line-height: 190%; margin-bottom: 20px;">
+                        <br>
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-without-color" target="_blank"> - How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html" target="_blank"> - About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemFour">Yes:</label> <input class="pass" id="itemFour" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+
+                <div class="checklistItem itemFourTwo dev">
+                    <ul>
+                        <li>
+                            <p class="guideline"><span class="bold guidenumber">1.4.2. <i class="fa fa-code"></i></span><br>
+                            Have you provided audio control so that for any audio with auto-play (that plays for more than 3 seconds) users are able to pause and stop it and can control the volume of
+                            it independently to controlling the volume of there computer/device (so it does not inter with screen reader volume).<br style="line-height: 190%; margin-bottom: 20px;">
+                            <br>
+                            <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-dis-audio" target="_blank"> - How to pass criteria</a></span><br>
+                            <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-dis-audio.html"target="_blank">- About this criteria</a></span><br style="line-height:160%">
+                            <br style="line-height:110%">
+                            <label for="itemFour">Yes:</label> <input class="pass" id="itemFour" name="yes" type="checkbox" value="yes"></p>
+                        </li>
+                    </ul>
+
+
+                    <p><!-- end of guidelineDesc --></p>
+               
+               
+               
+                <div class="checklistItem itemFourThree des">
+                    <ul>
+                        <li>
+                            <p class="guideline"><span class="bold guidenumber">1.4.3. <i class="fa fa-pencil"></i></span><br>
+                            Have you tested the visual presentation of text and images to make sure it has a <a target="_blank"  href = http://contrast-finder.tanaguru.com/> contrast ratio </a>  of at least 4.5:1. Unless it is large text which can have a contrast ratio of at least 3:1, text/images of text that is purely decoration or text that is part of a logo.
+<br style="line-height: 190%; margin-bottom: 20px;">
+                            <br>
+                            <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast" target="_blank"> - How to pass criteria</a></span><br>
+                            <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" target="_blank"> - About this criteria</a></span><br style="line-height:160%">
+                            <br style="line-height:110%">
+                            <label for="itemFour">Yes:</label> <input class="pass" id="itemFour" name="yes" type="checkbox" value="yes"></p>
+                        </li>
+                    </ul>
+
+
+                    <p><!-- end of guidelineDesc  1.4.3--></p>
+                    
+                    </div>
+                        <div class="checklistItem itemFourFour dev">
+                    <ul>
+                        <li>
+                            <p class="guideline"><span class="bold guidenumber">1.4.4. <i class="fa fa-code"></i></span><br>
+                             Can text be resized up to 200 percent without loss of content or functionality without assistive technology?  (Captions and images of text are exempt from this) 
+
+<br style="line-height: 190%; margin-bottom: 20px;">
+                            <br>
+                            <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-scale" target="_blank"> - How to pass criteria</a></span><br>
+                            <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" target="_blank"> - About this criteria</a></span><br style="line-height:160%">
+                            <br style="line-height:110%">
+                            <label for="itemFour">Yes:</label> <input class="pass" id="itemFour" name="yes" type="checkbox" value="yes"></p>
+                        </li>
+                    </ul>
+
+
+                    <p><!-- end of guidelineDesc --></p>
+
+               
+               
+                  
+                        <div class="checklistItem itemFourFive des">
+                    <ul>
+                        <li>
+                            <p class="guideline"><span class="bold guidenumber">1.4.5. <i class="fa fa-pencil"></i></span><br>
+                             Wherever possible (for example when the design of the text is not essential to the information being conveyed) have you used text to convey information rather than an image of text?
+
+<br style="line-height: 190%; margin-bottom: 20px;">
+                            <br>
+                            <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-text-presentation" target="_blank"> - How to pass criteria</a></span><br>
+                            <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-text-presentation.html" target="_blank">  - About this criteria</a></span><br style="line-height:160%">
+                            <br style="line-height:110%">
+                            <label for="itemFour">Yes:</label> <input class="pass" id="itemFour" name="yes" type="checkbox" value="yes"></p>
+                        </li>
+                    </ul>
+
+
+                    <p><!-- end of guidelineDesc 1.4.5--></p>
+
+               
   
-<section a href="#" id="section1">
-<h2> A brief introduction to accessibility </h2>
-  <p> 
-   Accessibility is the practice of ensuring that websites can be used by everyone regardless of whether they have a visual, physical, auditory or cognitive  disability. The accessibility guidelines  are structured around four key principles which help create websites that are <strong>perceivable, </strong> <strong>operable,</strong> <strong>understandable</strong> and <strong>robust.</strong>  <br> <br> Accessibility is important because, by making a conscious effort to address issues that affect users of different abilities,  you maximise the overall number of people who can use the site :)  
-  </p>
-</section>    
+               
+                </div><!--   PRINCIPLE 2 -->
+
+                <div class="container">
+                    <h2 class="principleTitle">Principle 2: Operable</h2>
+
+                    <p class="principleDesc italic"> This principle focuses on ensuring the user can operate the site and interact with the user interface components and navigation.
+ </p>
+                </div><!--- Principle desciption =-->
+                 <!--  ==================== PRINCIPLE 2.1 ==================== -->
+
+            <p class="guidelineDesc justDev"><span class="bold underline">2.1 Ensure the user can operate all site functionality using the keyboard.
+</span><br>
+             
+       </p>
+            <!--    CHECK LIST ITEM 2.1.1 -->
+
+            <div class="checklistItem itemTwoOneOne dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">2.1.1 <i class="fa fa-code -2x"></i></span><br>
+                        Can the entire site including forms, be operated using a keyboard? 
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-keyboard-operation-keyboard-operable"target="_blank">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html"target="_blank">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+
+            
+            
+            
+                  <!--    CHECK LIST ITEM 2.1.2 -->
+
+            <div class="checklistItem itemTwoOneOne dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">2.1.2 <i class="fa fa-code -2x"></i></span><br>
+                        Have you tested that the there are no keyboard traps (where using the keyboard causes the focus to get trapped moving within subsections on the site)? 
  
-    
-    
-<section a href="#" id="section2"> 
-    
-<h2> The accessibility checklist</h2>
-<p class = "italic"> 
-    <em> The checklist was created using  the <a href = "http://www.w3.org/TR/WCAG20/"> Web Content Accessibility Guidelines (WCAG) 2.0. to meet level AA </a> To successfully meet each principle, you must be able to tick each checkbox. Click on the link below each guideline to view the guidline exceptions, or to be directed to the WCAG website to find out more about the guideline. <br>  The checklist is colour coded to indicate who the checklist item is most relevant to and you can filter the list according to your preference below. Note: some checklist are revelant to both developer and designer, these are indicated with a blue background and double lines. </em> 
-    
-    
-    
-<div class = "filter">   
-    <p> <span style="text-decoration: underline;"> Filter the checklist </span> <br> <span id="colourKeyDes"> DDD  </span>  <span class = "yesCheck designer"> Checklist items for the designer: </span><input id="designerFilter" name = "desordes" type="radio" name="designer" value="designer"><br>  <span id="colourKeyDev"> DDD  </span>  <span class = "yesCheck"> Checklist items for the developer: </span><input id="developerFilter" name = "desordes" type="radio" value="developer"><br> <span id="colourKeyDevDes"> DDD  </span>   <span class = "yesCheck"> Checklist items for the design, developer and items relevant to both (signified by double underline and blue colour) </span><input id="allFilter" name = "desordes" type="radio" value="developer"> <br> 
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-keyboard-operation-trapping" target="_blank">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html" target="_blank"> - About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+
+            </div><!--- END OF CHECKLIST ITEM 2.1.2   =-->
+                      
+            </div><!--- END OF CHECKLIST ITEM 2.2   =-->
+            
+             <p class="guidelineDesc justDes"><span class="bold underline">2.2 Ensure users have enough time to read content and complete tasks such as filling out a form before it expires or content scrolls. </span><br>
         
-       
-</p>
-</div>    
-    
-    
- 
-    <!--   PRINCIPLE 1 -->
-    <div class = "container">  
-        <h2 class = "principleTitle"> Principle 1: Perceivable </h2>
-        <p class="principleDesc italic"> This principle focuses on ensuring the user can operate the site and interact with the user interface components and navigation using an assistive device.   </p>
-    </div> <!--- Principle desciption --->  
+            
+            <div class="checklistItem itemTwoTwoOne des">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">2.2.1<i class="fa fa-pencil -2x"></i></span><br>
+                        Are timings adjustable so that for each time limit, the user can either turn off the timer, adjust it before they encounter it or extend it (unless it is one of the exceptions)?  
+						<br style="line-height: 190%; margin-bottom: 20px;">
+						<span class="clicktoshowEx">- <span class="hideOrShow">Show</span> exceptions</span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-required-behaviors" target="_blank">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html" target="_blank">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+               
+                
+                
+                     <p class="exceptions"><strong>2.2.1 Guideline Exceptions</strong><br>
+                <br>
+                + Unless there is a <strong> real time exception </strong> and there is <strong> no alternative </strong> or if adjusting the time would invalidate the activity or if the time limit is longer than 20 hours.
+                <br>
+               </p><!--- END OF exception   =-->
+ </ul>
+            </div><!--- END OF CHECKLIST ITEM 2.2=-->
+            
+            
+                      <div class="checklistItem itemTwoTwoTwo des">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">2.2.2 <i class="fa fa-code -2x"></i></span><br>
+                        For moving, blinking or scrolling information (when these actions are not essential) that starts automatically or lasts longer than five seconds is there a mechanism for the user to pause,stop or hide?   
+                        
+                        <br> <br>  
+                        For auto-updating information that starts automatically or is presented in parallel with other content, can the user pause, stop,hide or control the frequency pause, stop, or hide it or to control the frequency of the update?
 
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-pause" target="_blank"> - How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html" target="_blank"> - About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
 
-<!--  ==================== PRINCIPLE 1.1 ==================== -->
-    
-<p class = "guidelineDesc justDes"> 
-    <span class = "bold underline">   1.1: Text Alternatives. </span> <br> <br> Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language. 
-</p>      
+            </div><!--- END OF CHECKLIST ITEM 2.2.2   =-->
+            
+             </p>
+            
+                     
+             <p class="guidelineDesc devdes"><span class="bold underline">2.3 Avoid using content that could cause seizures. </span><br>
+        
+            
+            <div class="checklistItem itemTwo des">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">2.3.1 <i class="fa fa-pencil -2x"></i></span><br>
+                        Have you avoided including anything on the site that contains anything that flashes more than 3 times per second?
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-seizure-does-not-violate" target="_blank"> - How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href=" http://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html" target="_blank">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+
+            </div><!--- END OF CHECKLIST ITEM 2.3 =-->
+
+            
+            
+            
+             <p class="guidelineDesc devdes"><span class="bold underline">2.4 Help users navigate and find content. </span><br>
+        
+            
+            <div class="checklistItem itemFourOne dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">2.4.1   <i class="fa fa-code -2x"></i></span><br>
+                        Have you ensured that the main content is easy to get by providing mechanism to bypass blocks of repeated content.
+
+                        <br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html" target="_blank"> - How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html" target="_blank"> - About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+                
+                
           
-<!--    CHECK LIST ITEM 1.1.1 -->  
-<div class = "checklistItem itemOne des">     
-            <ul>  
-                <li> 
-                    <p class = "guideline"> 
-                       <span class = "bold guidenumber"> 1.1.1.</span> For non-text content have you provided a text alternative that serves the equivalent purpose/provides the equivalent information?    
+            </div><!--- END OF CHECKLIST ITEM 2.4.1 =-->
+
+
+                
+                
+            <div class="checklistItem itemFourTwo desdev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">2.4.2 <i class="fa fa-pencil -2x"></i> <i class="fa fa-code -2x"></i></span><br>
+                     Are all pages titled clearly to reflect the page’s topic with clear descriptive headings for the sites and individual components (e.g. form with “required” labels) so information within the page can be easily located?
                         <br style="line-height: 190%; margin-bottom: 20px;">
-
-                        <span class = "clicktoshowEx">  -  <span class = "hideOrShow">Show </span> exceptions  </span> 
-                        <br>
-                        <span class = "externalLink"> <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html"> - How to pass critera </a> </span> 
-                        <br>  
-                        <span class = "externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html"> - About this critera </a> </span>
-                        <br style="line-height:160%"> 
-                        <br style="line-height:110%"> 
-                        <span class = "yesCheck"> Yes: </span><input id = "itemOne" class="pass" type="checkbox" name="yes" value="Yes"><br>       
-                    </p>
-                    
-                </li>
-            </ul>    
-            <p class = "exceptions"> 
-                    <strong> 1.1.1 Guidline Exceptions </strong>  <br> <br>
-                    + If the non-text context is a <strong>  control or accepts user input </strong>, then have you provided a name that describes it purpose?  <br><br>
-                    + If non-text content is <strong> time-based media,</strong>  then does it have a name that describes its purpose? <br><br>
-                    + If the non-text content is a <strong>test or exercise </strong> that would be invalid if presented in text, does the text alternative at least provide descriptive identification of the non-text content? <br><br>
-                    + If it intended to create a <strong>specific sensory</strong> experience then does the text alternative at least provide descriptive identification of the non-text content? <br><br>
-                    + If non-text is </strong>purely decorative </strong>then is it implemented in a way that can be ignored by assistive technology? <br><br> <br> 
-            </p><!--- END OF exception   --->
-    
-    
-    
-</div> <!--- END OF CHECKLIST ITEM 1.1.1  --->
-
-
-    
-<!--  ==================== PRINCIPLE 1.2 ==================== --> 
-
-<p class = "guidelineDesc justDev"> 
-    <span class = "bold underline">  1.2: Accessibility for time-based media content.  </span> <br>  <br> For time based media content, include a variety of methods for presenting the equivalent information. 
-</p>
-    
-<!--    CHECK LIST ITEM 1.2.1 --> 
-<div class = "checklistItem itemTwo dev">     
-<ul>  
-                <li> 
-                    <p class = "guideline"> 
-                        <span class = "bold guidenumber"> 1.2.1.</span> For audio-only content have you provided a text transcript? For video content have provided subtitles?     
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-title" target="_blank"> - How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html" target="_blank"> - About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+            </div><!--- END OF CHECKLIST ITEM 2.4.2 =-->
+ 
+            
+                            
+            <div class="checklistItem itemFourThree dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">2.4.3 <i class="fa fa-code -2x"></i> <i class="fa fa-code -2x"></i></span><br>
+                    When navigating through content using the keyboard, is the order that  the information is encountered (the focus order) consistent with the meaning of the content? 
                         <br style="line-height: 190%; margin-bottom: 20px;">
-                         
-                        <span class = "externalLink"> <a href=" "> - How to pass critera </a> </span> 
-                        <br>  
-                        <span class = "externalLink"><a href=" "> - About this critera </a> </span>
-                        <br style="line-height:160%"> 
-                        <br style="line-height:110%"> 
-                        <span class = "yesCheck"> Yes: </span><input id = "itemTwo" type="checkbox" name="yes" class="pass" value="Yes"><br> 
-                    </p>
+                        <span class="externalLink"><a href=" http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-focus-order" target="_blank"> - How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href=" http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html"target="_blank"> - About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+            </div><!--- END OF CHECKLIST ITEM 2.4.3 =-->
+             </div>
+            
+                        <div class="checklistItem itemFourFour desdev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">2.4.4 <i class="fa fa-pencil -2x"></i> <i class="fa fa-code -2x"></i></span><br>
+                   Can purpose of each link be determined by the link text alone or from the link text together with its programmatically determined link context (such as the text that is in the same paragraph).
+                        <br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-refs"target="_blank"> - How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html"target="_blank">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+          </div><!--- END OF CHECKLIST ITEM 2.4.4 =-->
+            
+               
+            <div class="checklistItem itemFourFive dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">2.4.5 <i class="fa fa-pe fncil -2x"></i> <i class="fa fa-code -2x"></i></span><br>
+                   Have you provided more than one method (together with the navigation menu) to navigate to other pages on the site (such as a search box and site map)? 
+                        <br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+            </div><!--- END OF CHECKLIST ITEM 2.4.5 =-->
+            
+            <div class="checklistItem itemFourSix devdes">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">2.4.6 <i class="fa fa-pencil -2x"></i> <i class="fa fa-code -2x"></i></span><br>
+                   Do all headings and labels clearly describe the topic or purpose of the content or page?  
+                        <br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+            </div><!--- END OF CHECKLIST ITEM 2.4.6 =-->          
+            
+              
+              
+              
+             <div class="checklistItem itemFourSeven desdev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">2.4.7 <i class="fa fa-pencil -2x"></i> <i class="fa fa-code -2x"></i></span><br>
+                  While using the keyboard is it clearly visible where on the site the keyboard currently has focus? 
+                        <br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+            </div><!--- END OF CHECKLIST ITEM 2.4.7=-->       
                  
-                </li>
+                  
+                 
+                 
+             </div> 
+                
+                
+                <h2 class="principleTitle">Principle 3: Understandable </h2>
+
+                    <p class="principleDesc italic"> This principle focuses on ensuring the user is able to process and understand the information even if they are. 
+ </p>
+                </div><!--- Principle desciption =-->
+                 <!--  ==================== PRINCIPLE 3.1 ==================== -->
+
+            <p class="guidelineDesc justDev"><span class="bold underline">3.1 Ensure the language of the site can be programmatically determined so the content can be displayed correctly by technology such as screen reader.
+</span><br>
+             
+       </p>
+            <!--    CHECK LIST ITEM 3.1.1 -->
+
+            <div class="checklistItem itemThreeOneOne dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">3.1.1 <i class="fa fa-code -2x"></i></span><br>
+                        For each web page has the human language of the site been defined in the HTML ( lang=“en” ) so that is can be programmatically determined? 
+
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+
+            
+            
+            
+                <!--    end of CHECK LIST ITEM 3.1.2 -->
+
+                <!--    CHECK LIST ITEM 3.1.2 -->
+
+            <div class="checklistItem itemThreeOneOne dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">3.1.2 <i class="fa fa-code -2x"></i></span><br>
+                        For each passage within the content, is it possible for the human language to be  programmatically determined?
+
+
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+
+            
+            
+            
+                  <!-- end of CHECK LIST ITEM 3.1.2 -->
+                
+            
+ <p class="guidelineDesc desdev"><span class="bold underline">3.2 Content appears and operates in predictable ways.
+</span><br>
+             
+       </p>
+            <!--    CHECK LIST ITEM 3.2.1 -->
+
+            <div class="checklistItem itemThreeOneTwo des">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">3.2.1 <i class="fa fa-pencil -2x"></i></span><br>
+                        3.2.2 For navigational mechanisms (such as the nav menu), have you maintained consistency across the pages?   
+ 
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+</div> 
+
+                   <!--    end of CHECK LIST ITEM 3.2.2 -->
+
+            
+            
+            <!--    CHECK LIST ITEM 3.2.2 -->
+
+            <div class="checklistItem itemThreeTwoTwo dev"> 
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">3.2.2 <i class="fa fa-code -2x"></i></span><br>
+                        Have you avoided creating any unexpected un-warned changes of context arising on input on the user interface components? 
+
+
+
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+                <!--    end of CHECK LIST ITEM 3.2.2 -->
+                
+                
+                 
+                <!--    CHECK LIST ITEM 3.2.3 -->
+
+            <div class="checklistItem itemThreeTwoThree dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">3.2.3 <i class="fa fa-code -2x"></i></span><br>
+                        Have you maintained consistency in choice of navigational mechanisms (such as the nav menu) across the pages?
+
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+                <!--    end of CHECK LIST ITEM 3.2.3 -->                 
+            </div>   
+                 
+   <p class="guidelineDesc justDev"><span class="bold underline">3.3 Help users avoid and correct mistakes.
+
+</span><br> 
+   
+                <!--    CHECK LIST ITEM 3.3.1 -->
+
+            <div class="checklistItem itemThreeOne dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">3.3.1 <i class="fa fa-code -2x"></i></span><br>
+                        Is data checked for input errors? <br>               
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+                <!--    end of CHECK LIST ITEM 3.3.1 -->      
+            
+        
+          <!--    CHECK LIST ITEM 3.3.2 -->
+
+            <div class="checklistItem itemThreeTwo dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">3.3.2 <i class="fa fa-code -2x"></i></span><br>
+                         When filling in forms, are error checking results displayed in text and indicated at the position on the form where the error has occurred? (e.g. *Completing the email address field is compulsory*) <br>             
+						             
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+                <!--    end of CHECK LIST ITEM 3.3.2 -->      
+            
+
+                 
+                 
+                  <!--    CHECK LIST ITEM 3.3.3 -->
+
+            <div class="checklistItem itemThreeTwo dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">3.3.3 <i class="fa fa-code -2x"></i></span><br>
+                        Are all input fields clearly labelled?
          
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+                <!--    end of CHECK LIST ITEM 3.3.3 -->      
+                 
+                 
+                                   <!--    CHECK LIST ITEM 3.3.4 -->
 
-</div><!--- END OF CHECKLIST ITEM 1.2  --->
+            <div class="checklistItem itemThreeThree dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">3.3.4 <i class="fa fa-code -2x"></i></span><br>
+                  Do the forms contain useful suggestions to how to correct them when errors occur?
+         
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+                <!--    end of CHECK LIST ITEM 3.3.3 -->    
+                 
+                 
+             <!--    CHECK LIST ITEM 3.3.5 -->
 
-    
-<!--  ==================== PRINCIPLE 1.3 ==================== -->
-    
-<p class = "guidelineDesc both">
-    <span class = "bold underline">   1.3:  Adaptable content.   </span> <br> <br> Maintain separation of the presentation from the information, functionality and structure of the site so that the content does not lose its meaning when its presentation is changed or the visuals are removed.</p> 
- 
-<!--    CHECK LIST ITEM 1.3.1 -->    
-<div class = "checklistItem itemThreeOne dev">
-            <ul>
-                <li> 
-                    <p class = "guideline"> 
-                        <span class = "bold guidenumber"> 1.3.1.</span> Have you used  ARIA (Accessible Rich Internet Applications ) appropriately in your  markup by doing the following: 
-                        <br>
-                        <br> + Have you used the role attribute to define the what an element is or does (e.g. article, banner, main)?    
-                        <br> + Have you used properties to define the property or meaning of elements. For example would it be possible for a screen reader to identify fields where the input is required?  
-                        <br> + Have you used states to identify the current condition of an element that changes based on user interaction or some dynamic variable?
-                        <br style="line-height: 190%; margin-bottom: 20px;">
-                        <br>
+            <div class="checklistItem itemThreeThree dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">3.3.5 <i class="fa fa-code -2x"></i></span><br>
+                  
+						Are instructions meaningful, to the point and in plain language? 
 
-                        <span class = "externalLink"> <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html"> - How to pass critera </a> </span> 
-                        <br>  
-                        <span class = "externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html"> - About this critera </a> </span>
-                        <br style="line-height:160%"> 
-                        <br style="line-height:110%"> 
-                        <span class = "yesCheck"> Yes: </span><input  id = "itemThreeOne" type="checkbox" name="yes"  class="pass" value="Yes"><br>   
-                    </p>
-                </li> 
-    </ul>
-</div>
-<div class = "checklistItem itemThreeTwo desdev">   
-            <ul>     
-                <li>
-                    
-                     <!--     guideline point 1.3.2-->
-                    <p class = guideline> 
-                        <span class = "bold guidenumber"> 1.3.2.</span> Is content ordered in a meaningful sequence and maintains its meaning when linearised, such as when style sheets are disabled? (Can a correct reading sequence be programatically determined.)? 
-                        <br style="line-height: 190%; margin-bottom: 20px;">
-                        <br>
-                        <span class = "externalLink"> <a href=""> - How to pass critera </a> </span> 
-                        <br>  
-                        <span class = "externalLink"><a href=""> - About this critera </a> </span>
-                        <br style="line-height:160%"> 
-                        <br style="line-height:110%"> 
-                        <span class = "yesCheck"> Yes: </span><input id = "itemThreeTwo" type="checkbox" name="yes"  class="pass" value="Yes"><br>   
-                    </p>
-                   
-                     <!--     guideline point end -->
-                </li> 
-            </ul>
-</div>                
-<div class = "checklistItem itemThreeThree des">  
-           <ul>   <li>
-                <!--     guideline point 1.3.3-->
-                <p class = guideline> 
-                        <span class = "bold guidenumber"> 1.3.3.</span> Have you avoided creating content that relies solely on its colour, shape, location or sound as its sole method of conveying its meaning? 
-                        <br style="line-height: 190%; margin-bottom: 20px;">
-                        <br>
-                        <span class = "externalLink"> <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html"> - How to pass critera </a> </span> 
-                        <br>  
-                        <span class = "externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html"> - About this critera </a> </span>
-                        <br style="line-height:160%"> 
-                        <br style="line-height:110%"> 
-                        <span class = "yesCheck"> Yes: </span><input id = "itemThreeThree" type="checkbox" name="yes" class="pass" value="Yes"><br>   
-                </p>
-                    <!--     guideline point end -->
-            </li>   
-</ul>
-</div>
+         
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+                <!--    end of CHECK LIST ITEM 3.3.5 -->    
+                 
+                 
+                                <!--    CHECK LIST ITEM 3.36 -->
 
- 
-<p class = "guidelineDesc"> 
-    <span class = "bold underline">  1.4: Distinguishable content. </span> <br>  <br> Ensure content is distinguishable, it should be easy for users to perceive the content. 
- </p> 
-    <div class = "checklistItem itemFour desdev">
+            <div class="checklistItem itemThreeThree dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">3.3.6 <i class="fa fa-code -2x"></i></span><br>
+                  
+						Is there confirmation before submitting a form?  
+
+         
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+                <!--    end of CHECK LIST ITEM 3.3.6 -->    
+                 
+                 
+                                  
+                 
+                 <!-- end of CHECK LIST ITEM 4.1  -->
+                
             
-        <ul>  
-            <li> 
-                <p class = guideline> 
-                <span class = "bold guidenumber"> 1.4.1.</span>  Have you avoided using colour as the only visual means of conveying information, indicating an action, prompting a response or distinguishing a visual element? 
-                <br style="line-height: 190%; margin-bottom: 20px;">           
-               <br>
-                <span class = "externalLink"> <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html"> - How to pass critera </a> </span> 
-                <br>  
-                <span class = "externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html"> - About this critera </a> </span>
-                <br style="line-height:160%"> 
-                <br style="line-height:110%"> 
-                <span class = "yesCheck"> Yes: </span><input id = "itemFour" type="checkbox" name="yes"  class="pass" value="Yes"><br>   
-                </p>
-            </li>
-        </ul>  
+ <p class="guidelineDesc justDev"><span class="bold underline">4.1 Maximise compatibility with current and future user tools by employing established web technologies according to their published standards and using compatible extensions.
+</span><br>
+             
+       </p>
+            <!--    CHECK LIST ITEM 4.1.1 -->
 
+            <div class="checklistItem itemFourOneOne dev">
+                <ul>
+                    <li>
+                        <p class="guideline"><span class="bold guidenumber">4.1.1 <i class="fa fa-code -2x"></i></span><br>
+                       Is the markup language parseable (with complete start and end tags etc) so that it can be interpreted by a screen reader?
+						<br style="line-height: 190%; margin-bottom: 20px;">
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- How to pass criteria</a></span><br>
+                        <span class="externalLink"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html">- About this criteria</a></span><br style="line-height:160%">
+                        <br style="line-height:110%">
+                        <label for="itemOne">Yes:</label> <input class="pass" id="itemOne" name="yes" type="checkbox" value="yes"></p>
+                    </li>
+                </ul>
+</div> 
+
+                   <!--    end of CHECK LIST ITEM 4.1.2 -->
 
  
-        <div id = "resetChecks"> Reset checklist </div>
+
+                       
+                 
+                 
+                 
+            
+            </div>
+            
+            
+            
+                    <div id="resetChecks">
+                        Reset checklist
+                    </div>
+
+            
+        </section><!-- end of section 2 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section id="section3">
+            <h2>Tools & Resources</h2>
+
+            <p><span class="resource">Accessibility tests:</span><br>
+            Enter the URL to test whether the site meets the <a href="http://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a><br>
+            http://www.evaluera.co.uk/<br>
+            <br>
+                       <br>
+            <span class="resource"> <a href = "http://colororacle.org/" target="_blank">  Colour blindness simulator</a> </span><br>
+   
+            <br>
+            <span class="resource"> <a href = " http://contrast-finder.tanaguru.com/" target="_blank">  Colour contrast checker </a> </span><br>
         
-</p>  <!-- end of guidelineDesc -->
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</section><!-- end of section 2 -->
-
-<section a href="#" id="section3">        
-<h2>Tools & Resources </h2>
-    <p>
-        <span class= "resource">  Accessibility tests:  </span> <br>
-    Enter the URL to test whether the site meets the <a href = "http://www.w3.org/TR/WCAG20/"> Web Content Accessibility Guidelines (WCAG) 2.0 </a> <br>
-    http://www.evaluera.co.uk/<br>
-    <br>
-   <span class= "resource">  For chrome:  </span> <br>
-    https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en<br>
-    <br>
-    <span class= "resource"> Colour blindness simulator </span> <br>
-    http://colororacle.org/<br>
-    <br>
-    <span class= "resource"> Colour contrast  </span> <br>
-    http://contrast-finder.tanaguru.com/<br>
-    <br>
-     <span class= "resource">  HTML validator </span> <br>
-    http://users.skynet.be/mgueury/mozilla/<br>
-    http://squizlabs.github.io/HTML_CodeSniffer/<br>
-    <br>
-    </p> 
-</section>   <!-- end of section 3 -->  
-        
-
-
-</div> <!-- //end of contentWrapper div -->
-            
-            
+            <br>
+            <span class="resource"><a href = "https://validator.w3.org" target="_blank"> HTML validator </span><br>
+         
+            <br></p>
+        </section><!-- end of section 3 -->
+    </div><!-- //end of contentWrapper div -->
 </body>
-
 </html>
-
